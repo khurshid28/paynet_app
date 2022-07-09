@@ -1,19 +1,17 @@
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
-class MinuteItemModel {
-  String? title;
+
+class SMSItemModel {
   String? type;
-  String? price;
-  String? limit;
   String? code;
+  String? title;
+  String? price;
   Future call() async {
     await FlutterPhoneDirectCaller.callNumber(code!);
   }
-
-  MinuteItemModel({
-    required this.title,
+  SMSItemModel({
     required this.type,
-    required this.price,
-    required this.limit,
     required this.code,
+    required this.title,
+    required this.price,
   });
 }

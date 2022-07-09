@@ -3,10 +3,10 @@ import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 class PlansItemModel {
   String? title;
   String? type;
-  int? price;
+  String? price;
   String? limit;
-  int? internet;
-  int? sms;
+  String? internet;
+  String? sms;
   String? changePlanText;
   String? text;
   String? code;
