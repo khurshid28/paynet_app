@@ -7,7 +7,7 @@ class PlansItemModel {
   String? limit;
   String? internet;
   String? sms;
-  String? changePlanText;
+  String? min;
   String? text;
   String? code;
   Future call() async {
@@ -21,7 +21,7 @@ class PlansItemModel {
     required this.limit,
     required this.internet,
     required this.sms,
-    required this.changePlanText,
+    required this.min,
     required this.text,
     required this.code,
   });

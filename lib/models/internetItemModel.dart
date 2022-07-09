@@ -4,7 +4,7 @@ class INTERNETItemModel {
   String? type;
   String? code;
   String? title;
-  String? subtitle;
+  String? limit;
   String? price;
 
   Future call() async {
@@ -15,7 +15,7 @@ class INTERNETItemModel {
     required this.type,
     required this.code,
     required this.title,
-    required this.subtitle,
+    required this.limit,
     required this.price,
   });
 }

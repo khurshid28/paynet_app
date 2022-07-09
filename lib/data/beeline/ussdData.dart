@@ -1,28 +1,13 @@
 import 'package:paynet_app/models/plansItemModel.dart';
+import 'package:paynet_app/models/ussdItemModel.dart';
 
 class BeelineUSSDData {
   static List<USSDItemModel> items = [
-    PlansItemModel(
-      title: 'title',
-      type: 'type',
-      price: 120,
-      limit: 'limit',
-      internet: 2,
-      sms: 6,
-      changePlanText: 'changePlanText',
-      text: 'text',
-      code: '+998950642827',
+    USSDItemModel(
+      type: 'USSD KODLAR',
+      code: '*102#',
+      title: 'HISOBNI TEKSHIRISH',
+      subtitle: 'Hisobingizdagi qoldiqni ko\'rish uchun ushbu kodni yuborishingiz mumkin',
     ),
-    // PlansItemModel(
-    //   title: title,
-    //   type: type,
-    //   price: price,
-    //   limit: limit,
-    //   internet: internet,
-    //   sms: sms,
-    //   changePlanText: changePlanText,
-    //   text: text,
-    //   code: code,
-    // )
   ];
 }

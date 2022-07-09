@@ -1,17 +1,13 @@
-// import 'package:paynet_app/models/plansItemModel.dart';
+import 'package:paynet_app/models/internetItemModel.dart';
 
-// class BeelinePlansData {
-//   List<PlansItemModel> items = [
-//     PlansItemModel(
-//       title: title,
-//       type: type,
-//       price: price,
-//       limit: limit,
-//       internet: internet,
-//       sms: sms,
-//       changePlanText: changePlanText,
-//       text: text,
-//       code: code,
-//     )
-//   ];
-// }
+class BeelineInternetData {
+  static List<INTERNETItemModel> items = [
+    INTERNETItemModel(
+      title: '1000 MB',
+      type: 'OY',
+      price: '9.000 so\'m',
+      limit: '30 KUN',
+      code: '*147*10072*21447#',
+    ),
+  ];
+}
