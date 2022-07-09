@@ -84,7 +84,7 @@ class _UzmobileViewState extends State<UzmobileView> {
                           height: 32.h,
                           alignment: Alignment.center,
                           child: Text(
-                            'Beeline',
+                            'Uzmobile',
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 27.sp,

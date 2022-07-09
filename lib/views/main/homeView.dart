@@ -16,7 +16,7 @@ class _HomeViewState extends State<HomeView> {
   LoopPageController loopPageController = LoopPageController();
   List<String> images = [
     'beeline',
-    'mobiuz',
+    'ums',
     'uzmobile',
     'ucell',
   ];

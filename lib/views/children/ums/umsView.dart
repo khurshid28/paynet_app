@@ -84,7 +84,7 @@ class _UmsViewState extends State<UmsView> {
                           height: 32.h,
                           alignment: Alignment.center,
                           child: Text(
-                            'Beeline',
+                            'Mobiuz',
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 27.sp,
