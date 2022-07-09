@@ -26,6 +26,8 @@ class PaynetApp extends StatelessWidget {
             '/main':(context)=>ZoomDrawerView(),
             '/beeline':(context)=>BeelineView(),
             '/ucell':(context)=>UcellView(),
+             '/ums':(context)=>UcellView(),
+              '/uzmobile':(context)=>UcellView(),
             
 
           },

@@ -2,16 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'children/beelineUSSDView.dart';
-
-class BeelineView extends StatefulWidget {
-  const BeelineView({Key? key}) : super(key: key);
+class UmsView extends StatefulWidget {
+  const UmsView({Key? key}) : super(key: key);
 
   @override
-  State<BeelineView> createState() => _BeelineViewState();
+  State<UmsView> createState() => _UmsViewState();
 }
 
-class _BeelineViewState extends State<BeelineView> {
+class _UmsViewState extends State<UmsView> {
   int selectItem = 2;
   List<String> items = [
     'sms',
@@ -20,14 +18,13 @@ class _BeelineViewState extends State<BeelineView> {
     'plans',
     'minute',
   ];
- List<Widget> pages =[
-  Container(),
-  Container(),
-
-  BeelineUSSDView(),
- Container(),
- Container(),
- ];
+  List<Widget> pages = [
+    Container(),
+    Container(),
+    Container(),
+    Container(),
+    Container(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +36,7 @@ class _BeelineViewState extends State<BeelineView> {
                 alignment: Alignment.bottomCenter,
                 height: 102.h,
                 decoration: BoxDecoration(
-                  color: Colors.yellow,
+                  color: Colors.red,
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black26,
@@ -103,10 +100,7 @@ class _BeelineViewState extends State<BeelineView> {
                   ),
                 ),
               ),
-              Expanded(
-                child: 
-             pages[selectItem]
-              ),
+              Expanded(child: pages[selectItem]),
             ],
           ),
           Positioned(
@@ -122,7 +116,7 @@ class _BeelineViewState extends State<BeelineView> {
                       height: 72.h,
                       width: 1.sw,
                       decoration: BoxDecoration(
-                        color: Colors.yellow,
+                        color: Colors.red,
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black26,
@@ -167,7 +161,7 @@ class _BeelineViewState extends State<BeelineView> {
                               ),
                               child: SvgPicture.asset(
                                 'assets/icons/' + items[index] + '.svg',
-                                color: Colors.yellow,
+                                color: Colors.red,
                                 width: 48.w,
                               ),
                               decoration: BoxDecoration(

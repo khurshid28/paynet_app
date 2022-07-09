@@ -26,18 +26,18 @@ class _BeelineUSSDViewState extends State<BeelineUSSDView> {
       // return a custom ItemCard
       itemBuilder: (context, index) => InkWell(
         onTap: () async{
-         await BeelinePlansData.items[index].call();
+        //  await BeelinePlansData.items[index].call();
         },
         child: Container(
           width: 50,
           child: Center(
             child: Text(
-              BeelinePlansData.items[index].code!.toString(),
+              'BeelinePlansData.items[index].code!.toString(),'
             ),
           ),
         ),
       ),
-      itemCount: BeelinePlansData.items.length,
+      itemCount:2,// BeelinePlansData.items.length,
     );
   }
 }
