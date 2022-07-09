@@ -61,14 +61,21 @@ class _HomeViewState extends State<HomeView> {
               physics: BouncingScrollPhysics(),
               itemCount: 4,
               itemBuilder: (_, index) {
-                return Container(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 30.w,
-                  ),
-                  height: 160.h,
-                  alignment: Alignment.center,
-                  child: Image.asset(
-                    'assets/images/' + images[index] + '.png',
+                return InkWell(
+                  splashColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: (){
+                    Navigator.pushNamed(context,'/${images[index]}');
+                  },
+                  child: Container(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 30.w,
+                    ),
+                    height: 160.h,
+                    alignment: Alignment.center,
+                    child: Image.asset(
+                      'assets/images/' + images[index] + '.png',
+                    ),
                   ),
                 );
               },
