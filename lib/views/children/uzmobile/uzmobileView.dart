@@ -15,8 +15,8 @@ class _UzmobileViewState extends State<UzmobileView> {
     'sms',
     'internet',
     'ussd',
-    'plans',
-    'minute',
+    'tariflar',
+    'daqiqa',
   ];
   List<Widget> pages = [
     Container(),
@@ -25,6 +25,9 @@ class _UzmobileViewState extends State<UzmobileView> {
     Container(),
     Container(),
   ];
+  Color backColor=Color(0xff00b0ef);
+  Color itemColor= Colors.white;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +39,7 @@ class _UzmobileViewState extends State<UzmobileView> {
                 alignment: Alignment.bottomCenter,
                 height: 102.h,
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: backColor,
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black26,
@@ -76,7 +79,7 @@ class _UzmobileViewState extends State<UzmobileView> {
                             height: 32.h,
                             child: SvgPicture.asset(
                               'assets/icons/back.svg',
-                              color: Colors.black,
+                              color: itemColor,
                             ),
                           ),
                         ),
@@ -84,9 +87,9 @@ class _UzmobileViewState extends State<UzmobileView> {
                           height: 32.h,
                           alignment: Alignment.center,
                           child: Text(
-                            'Uzmobile',
+                            'Beeline',
                             style: TextStyle(
-                              color: Colors.black,
+                              color: itemColor,
                               fontSize: 27.sp,
                               fontWeight: FontWeight.bold,
                             ),
@@ -116,7 +119,7 @@ class _UzmobileViewState extends State<UzmobileView> {
                       height: 72.h,
                       width: 1.sw,
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: backColor,
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black26,
@@ -161,14 +164,14 @@ class _UzmobileViewState extends State<UzmobileView> {
                               ),
                               child: SvgPicture.asset(
                                 'assets/icons/' + items[index] + '.svg',
-                                color: Colors.blue,
+                                color: backColor,
                                 width: 48.w,
                               ),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(
                                   18.r,
                                 ),
-                                color: Colors.black,
+                                color: itemColor,
                               ),
                             );
                           } else {
@@ -197,7 +200,7 @@ class _UzmobileViewState extends State<UzmobileView> {
                                       padding: EdgeInsets.zero,
                                       child: SvgPicture.asset(
                                         'assets/icons/' + items[index] + '.svg',
-                                        color: Colors.black,
+                                        color: itemColor,
                                         height: 30.h,
                                       ),
                                     ),
@@ -205,6 +208,7 @@ class _UzmobileViewState extends State<UzmobileView> {
                                       items[index],
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
+                                        color: itemColor
                                       ),
                                     )
                                   ],

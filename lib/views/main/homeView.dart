@@ -1,34 +1,51 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_zoom_drawer/config.dart';
 import 'package:loop_page_view/loop_page_view.dart';
+import 'package:paynet_app/views/main/drawerView.dart';
 
 class HomeView extends StatefulWidget {
-  ZoomDrawerController zoomDrawerController;
-  HomeView({Key? key, required this.zoomDrawerController}) : super(key: key);
+  HomeView({Key? key,}) : super(key: key);
 
   @override
   State<HomeView> createState() => _HomeViewState();
 }
 
 class _HomeViewState extends State<HomeView> {
-  LoopPageController loopPageController = LoopPageController();
+
+  LoopPageController loopPageController = LoopPageController(initialPage: 0,keepPage: true);
   List<String> images = [
     'beeline',
     'ums',
     'uzmobile',
     'ucell',
   ];
+
+  Color colour = Colors.white;
+  Color itemcolour = Colors.black;
+  final GlobalKey<ScaffoldState> _key = GlobalKey(
+
+  );
+
+  String path='assets/images/beeline.png';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      key: _key,
+      backgroundColor: colour ,
+      drawer: Drawer(
+        width: 280.w,
+        child: DrawerView(
+          backColor:itemcolour == Colors.black ? Color(0xfffedb02) :itemcolour,
+          path:path,
+        ),
+
+      ),
       body: Column(
         children: [
           Container(
             height: 104.h,
-            color: Colors.white,
+            color: colour,
             padding: EdgeInsets.symmetric(
               horizontal: 36.w,
             ),
@@ -39,7 +56,7 @@ class _HomeViewState extends State<HomeView> {
                   splashColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () {
-                    widget.zoomDrawerController.open;
+                    _key.currentState!.openDrawer();
                   },
                   child: Container(
                     padding: EdgeInsets.all(
@@ -47,7 +64,7 @@ class _HomeViewState extends State<HomeView> {
                     ),
                     child: SvgPicture.asset(
                       'assets/icons/menu.svg',
-                      color: Colors.blueAccent,
+                      color: itemcolour,
                       height: 40.h,
                     ),
                   ),
@@ -60,6 +77,10 @@ class _HomeViewState extends State<HomeView> {
               controller: loopPageController,
               physics: BouncingScrollPhysics(),
               itemCount: 4,
+              onPageChanged:(index){
+                changeBackgroundColor(index);
+
+              },
               itemBuilder: (_, index) {
                 return InkWell(
                   splashColor: Colors.transparent,
@@ -74,7 +95,7 @@ class _HomeViewState extends State<HomeView> {
                     height: 160.h,
                     alignment: Alignment.center,
                     child: Image.asset(
-                      'assets/images/' + images[index] + '.png',
+                      path,
                     ),
                   ),
                 );
@@ -86,7 +107,7 @@ class _HomeViewState extends State<HomeView> {
       bottomNavigationBar: Container(
         height: 256.h,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: colour,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(
               90.r,
@@ -111,11 +132,12 @@ class _HomeViewState extends State<HomeView> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Easy payment to mobile',
+                  'Biz bilan barchasi oson ',
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 32.sp,
                     fontWeight: FontWeight.bold,
-                    color: Colors.blueAccent,
+                    color: itemcolour,
                   ),
                 ),
                 SizedBox(
@@ -137,7 +159,7 @@ class _HomeViewState extends State<HomeView> {
                         child: Icon(
                           Icons.arrow_back_ios_new_rounded,
                           size: 60,
-                          color: Colors.blueAccent,
+                          color: itemcolour,
                         ),
                       ),
                     ),
@@ -154,7 +176,7 @@ class _HomeViewState extends State<HomeView> {
                         child: Icon(
                           Icons.arrow_forward_ios_rounded,
                           size: 60,
-                          color: Colors.blueAccent,
+                          color: itemcolour,
                         ),
                       ),
                     ),
@@ -166,5 +188,22 @@ class _HomeViewState extends State<HomeView> {
         ),
       ),
     );
+  }
+  void changeBackgroundColor(int index){
+    if(index == 0){
+       colour = Colors.white;
+       itemcolour = Colors.black;
+    }else if(index == 1){
+       colour = Colors.white;
+       itemcolour = Color(0xffe41f26);
+    }else if(index == 2){
+       colour = Colors.white;
+       itemcolour = Color(0xff00b0ef);
+    }else if(index == 3){
+       colour = Colors.white;
+       itemcolour = Color(0xff633493);
+    }
+    path ='assets/images/' + images[index] + '.png';
+    setState((){});
   }
 }

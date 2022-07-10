@@ -16,8 +16,8 @@ class _UcellViewState extends State<UcellView> {
     'sms',
     'internet',
     'ussd',
-    'plans',
-    'minute',
+    'tariflar',
+    'daqiqa',
   ];
  List<Widget> pages =[
   Container(),
@@ -27,6 +27,7 @@ class _UcellViewState extends State<UcellView> {
  Container(),
  Container(),
  ];
+ Color backColor=Color(0xff633493);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +39,7 @@ class _UcellViewState extends State<UcellView> {
                 alignment: Alignment.bottomCenter,
                 height: 102.h,
                 decoration: BoxDecoration(
-                  color: Color(0xffaf48db),
+                  color: backColor,
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black26,
@@ -121,7 +122,7 @@ class _UcellViewState extends State<UcellView> {
                       height: 72.h,
                       width: 1.sw,
                       decoration: BoxDecoration(
-                        color: Color(0xffaf48db),
+                        color: backColor,
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black26,
@@ -166,7 +167,7 @@ class _UcellViewState extends State<UcellView> {
                               ),
                               child: SvgPicture.asset(
                                 'assets/icons/' + items[index] + '.svg',
-                                color: Color(0xffaf48db),
+                                color: backColor,
                                 width: 48.w,
                               ),
                               decoration: BoxDecoration(

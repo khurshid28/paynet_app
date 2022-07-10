@@ -17,17 +17,18 @@ class _BeelineViewState extends State<BeelineView> {
     'sms',
     'internet',
     'ussd',
-    'plans',
-    'minute',
+    'tariflar',
+    'daqiqa',
   ];
  List<Widget> pages =[
   Container(),
   Container(),
-
   BeelineUSSDView(),
- Container(),
- Container(),
+  Container(),
+  Container(),
  ];
+  Color backColor=Color(0xfffedb02);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +40,7 @@ class _BeelineViewState extends State<BeelineView> {
                 alignment: Alignment.bottomCenter,
                 height: 102.h,
                 decoration: BoxDecoration(
-                  color: Colors.yellow,
+                  color:backColor,
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black26,
@@ -122,7 +123,7 @@ class _BeelineViewState extends State<BeelineView> {
                       height: 72.h,
                       width: 1.sw,
                       decoration: BoxDecoration(
-                        color: Colors.yellow,
+                        color: backColor,
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black26,
@@ -167,7 +168,7 @@ class _BeelineViewState extends State<BeelineView> {
                               ),
                               child: SvgPicture.asset(
                                 'assets/icons/' + items[index] + '.svg',
-                                color: Colors.yellow,
+                                color: backColor,
                                 width: 48.w,
                               ),
                               decoration: BoxDecoration(
