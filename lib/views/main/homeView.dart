@@ -2,18 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:loop_page_view/loop_page_view.dart';
+import 'package:paynet_app/views/children/main/mainView.dart';
 import 'package:paynet_app/views/main/drawerView.dart';
 
 class HomeView extends StatefulWidget {
-  HomeView({Key? key,}) : super(key: key);
+  HomeView({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<HomeView> createState() => _HomeViewState();
 }
 
 class _HomeViewState extends State<HomeView> {
-
-  LoopPageController loopPageController = LoopPageController(initialPage: 0,keepPage: true);
+  LoopPageController loopPageController =
+      LoopPageController(initialPage: 0, keepPage: true);
   List<String> images = [
     'beeline',
     'ums',
@@ -23,23 +26,21 @@ class _HomeViewState extends State<HomeView> {
 
   Color colour = Colors.white;
   Color itemcolour = Colors.black;
-  final GlobalKey<ScaffoldState> _key = GlobalKey(
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
 
-  );
-
-  String path='assets/images/beeline.png';
+  String path = 'assets/images/beeline.png';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: _key,
-      backgroundColor: colour ,
+      backgroundColor: colour,
       drawer: Drawer(
         width: 280.w,
         child: DrawerView(
-          backColor:itemcolour == Colors.black ? Color(0xfffedb02) :itemcolour,
-          path:path,
+          backColor:
+              itemcolour == Colors.black ? Color(0xfffedb02) : itemcolour,
+          path: path,
         ),
-
       ),
       body: Column(
         children: [
@@ -77,16 +78,22 @@ class _HomeViewState extends State<HomeView> {
               controller: loopPageController,
               physics: BouncingScrollPhysics(),
               itemCount: 4,
-              onPageChanged:(index){
+              onPageChanged: (index) {
                 changeBackgroundColor(index);
-
               },
               itemBuilder: (_, index) {
                 return InkWell(
                   splashColor: Colors.transparent,
                   highlightColor: Colors.transparent,
-                  onTap: (){
-                    Navigator.pushNamed(context,'/${images[index]}');
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MainView(
+                          index:index
+                        ),
+                      ),
+                    );
                   },
                   child: Container(
                     padding: EdgeInsets.symmetric(
@@ -189,21 +196,22 @@ class _HomeViewState extends State<HomeView> {
       ),
     );
   }
-  void changeBackgroundColor(int index){
-    if(index == 0){
-       colour = Colors.white;
-       itemcolour = Colors.black;
-    }else if(index == 1){
-       colour = Colors.white;
-       itemcolour = Color(0xffe41f26);
-    }else if(index == 2){
-       colour = Colors.white;
-       itemcolour = Color(0xff00b0ef);
-    }else if(index == 3){
-       colour = Colors.white;
-       itemcolour = Color(0xff633493);
+
+  void changeBackgroundColor(int index) {
+    if (index == 0) {
+      colour = Colors.white;
+      itemcolour = Colors.black;
+    } else if (index == 1) {
+      colour = Colors.white;
+      itemcolour = Color(0xffe41f26);
+    } else if (index == 2) {
+      colour = Colors.white;
+      itemcolour = Color(0xff00b0ef);
+    } else if (index == 3) {
+      colour = Colors.white;
+      itemcolour = Color(0xff633493);
     }
-    path ='assets/images/' + images[index] + '.png';
-    setState((){});
+    path = 'assets/images/' + images[index] + '.png';
+    setState(() {});
   }
 }

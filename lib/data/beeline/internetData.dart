@@ -1,7 +1,8 @@
+import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/internetItemModel.dart';
 
-class BeelineInternetData {
-  static List<INTERNETItemModel> items = [
+class BeelineInternetData extends Data{
+   List items = [
     INTERNETItemModel(
       title: '1000 MB',
       type: 'OY',
