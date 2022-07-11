@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:loop_page_view/loop_page_view.dart';
-import 'package:paynet_app/views/children/main/mainView.dart';
+import 'package:paynet_app/views/children/mainView.dart';
 import 'package:paynet_app/views/main/drawerView.dart';
 
 class HomeView extends StatefulWidget {

@@ -1,7 +1,7 @@
 import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/minuteItemModel.dart';
 
-class BeelineMinuteData implements MinuteData{
+class BeelineMinuteData extends MinuteData{
   @override
    List items = [
     MinuteItemModel(

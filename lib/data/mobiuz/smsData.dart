@@ -1,7 +1,7 @@
 import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/smsItemModel.dart';
 
-class MobiuzSMSData implements SmsData{
+class MobiuzSMSData extends SmsData{
    @override
    List items =  [
     SMSItemModel(

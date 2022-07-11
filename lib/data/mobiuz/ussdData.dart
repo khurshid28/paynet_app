@@ -2,7 +2,7 @@ import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/plansItemModel.dart';
 import 'package:paynet_app/models/ussdItemModel.dart';
 
-class MobiuzUSSDData implements UssdData{
+class MobiuzUSSDData extends UssdData{
    @override
    List items =  [
     USSDItemModel(

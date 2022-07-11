@@ -1,7 +1,7 @@
 import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/plansItemModel.dart';
 
-class BeelinePlansData implements PlansData{
+class BeelinePlansData extends PlansData{
   @override
    List items = 
   [

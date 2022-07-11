@@ -1,7 +1,7 @@
 import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/smsItemModel.dart';
 
-class UztelecomSMSData implements SmsData{
+class UztelecomSMSData extends SmsData{
   @override
    List items =  [
     SMSItemModel(

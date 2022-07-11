@@ -1,7 +1,7 @@
 import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/internetItemModel.dart';
 
-class UztelecomInternetData implements InternetData{
+class UztelecomInternetData extends InternetData{
   @override
    List items =  [
     INTERNETItemModel(
