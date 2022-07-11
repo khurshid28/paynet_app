@@ -63,3 +63,4 @@ class MobiuzMinuteData implements MinuteData{
     ),
   ];
 }
+
