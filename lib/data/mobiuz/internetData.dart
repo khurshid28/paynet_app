@@ -1,9 +1,7 @@
-import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/internetItemModel.dart';
 
-class MobiuzInternetData extends InternetData{
-  @override
-   List items = [
+class MobiuzInternetData {
+  static List<INTERNETItemModel> items = [
     INTERNETItemModel(
       type: 'OY',
       title: '300 MB',
@@ -275,5 +273,4 @@ class MobiuzInternetData extends InternetData{
       code: '*171*202*50000*010300368*1#',
     ),
   ];
-
 }

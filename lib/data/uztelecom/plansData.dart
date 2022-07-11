@@ -1,9 +1,7 @@
-import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/plansItemModel.dart';
 
-class UztelecomPlansData extends PlansData{
-  @override
-   List items =  [
+class UztelecomPlansData {
+  static List<PlansItemModel> items = [
     PlansItemModel(
       title: 'MILLIY 10',
       type: 'OY',

@@ -1,9 +1,7 @@
-import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/ussdItemModel.dart';
 
-class UztelecomUSSDData extends UssdData{
-  @override
-   List items = [
+class UztelecomUSSDData {
+  static List<USSDItemModel> items = [
     USSDItemModel(
       type: 'USSD KODLAR',
       code: '*100#',

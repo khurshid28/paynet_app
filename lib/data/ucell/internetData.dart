@@ -1,9 +1,7 @@
-import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/internetItemModel.dart';
 
-class UcellInternetData extends InternetData{
-  @override
-   List items =  [
+class UcellInternetData {
+  static List<INTERNETItemModel> items = [
     INTERNETItemModel(
       title: '1 GB',
       type: 'SOF',

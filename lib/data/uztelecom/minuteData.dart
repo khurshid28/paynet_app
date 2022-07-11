@@ -1,9 +1,7 @@
-import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/minuteItemModel.dart';
 
-class UztelecomMinuteData extends MinuteData{
-  @override
-   List items =  [
+class UztelecomMinuteData {
+  static List<MinuteItemModel> items = [
     MinuteItemModel(
       title: '100 daq',
       type: "DAQIQALAR",

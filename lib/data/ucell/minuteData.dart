@@ -1,9 +1,7 @@
-import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/minuteItemModel.dart';
 
-class UcellMinuteData extends MinuteData{
-  @override
-   List items =  [
+class UcellMinuteData {
+  static List<MinuteItemModel> items = [
     MinuteItemModel(
       title: '200 daq',
       type: null,

@@ -1,9 +1,7 @@
-import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/smsItemModel.dart';
 
-class UcellSMSData extends SmsData{
-  @override
-   List items =  [
+class UcellSMSData {
+  static List<SMSItemModel> items = [
     SMSItemModel(
       type: 'OYLIK',
       title: '50 SMS',

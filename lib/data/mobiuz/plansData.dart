@@ -1,9 +1,7 @@
-import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/plansItemModel.dart';
 
-class MobiuzPlansData extends PlansData{
-    @override
-   List items =  [
+class MobiuzPlansData {
+  static List<PlansItemModel> items = [
     PlansItemModel(
       title: 'OMAD PLUS',
       type: 'OY',

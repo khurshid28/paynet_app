@@ -1,9 +1,7 @@
-import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/minuteItemModel.dart';
 
-class MobiuzMinuteData extends MinuteData{
-  @override
-   List items = [
+class MobiuzMinuteData {
+  static List<MinuteItemModel> items = [
     MinuteItemModel(
       title: '60 daq',
       type: 'OY',
@@ -63,4 +61,3 @@ class MobiuzMinuteData extends MinuteData{
     ),
   ];
 }
-

@@ -1,10 +1,8 @@
-import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/plansItemModel.dart';
 import 'package:paynet_app/models/ussdItemModel.dart';
 
-class MobiuzUSSDData extends UssdData{
-   @override
-   List items =  [
+class MobiuzUSSDData {
+  static List<USSDItemModel> items = [
     USSDItemModel(
       type: 'USSD KODLAR',
       code: '*100#',

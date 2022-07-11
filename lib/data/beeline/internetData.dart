@@ -1,9 +1,7 @@
-import 'package:paynet_app/data/data.dart';
 import 'package:paynet_app/models/internetItemModel.dart';
 
-class BeelineInternetData extends InternetData{
-  @override
-   List items =  [
+class BeelineInternetData {
+  static List<INTERNETItemModel> items = [
     INTERNETItemModel(
       title: '4G OY',
       type: 'OY',
