@@ -1,0 +1,126 @@
+import 'package:paynet_app/data/data.dart';
+import 'package:paynet_app/models/plansItemModel.dart';
+
+class UcellPlansData extends PlansData{
+  @override
+    List<String> types = [
+    'SOF',
+    'BOSHQA',
+    
+
+  ];
+  @override
+   List items =  [
+    PlansItemModel(
+      title: 'SOF 18',
+      type: 'SOF',
+      price: '18.000 so\'m',
+      limit: '30 kun',
+      min: '1200 daqiqa',
+      internet: '3000 MB',
+      sms: '500 sms',
+      text: '1 MB/daq/SMS = 50 so\'m',
+      code: '*120#',
+    ),
+    PlansItemModel(
+      title: 'SOF 30',
+      type: 'SOF',
+      price: '30.000 so\'m',
+      limit: '30 kun',
+      min: '3000 daqiqa',
+      internet: '7000 MB',
+      sms: '1000 sms',
+      text: '1 MB/daq/SMS = 50 so\'m',
+      code: '*120#',
+    ),
+    PlansItemModel(
+      title: 'SOF 40',
+      type: 'SOF',
+      price: '40.000 so\'m',
+      limit: '30 kun',
+      min: 'VIP daqiqa',
+      internet: '10000 MB',
+      sms: '1500 sms',
+      text: '1 MB/daq/SMS = 25 so\'m',
+      code: '*120#',
+    ),
+    PlansItemModel(
+      title: 'SOF 50',
+      type: 'SOF',
+      price: '50.000 so\'m',
+      limit: '30 kun',
+      min: 'VIP daqiqa',
+      internet: '13000 MB',
+      sms: '2500 sms',
+      text: '1 MB/daq/SMS = 25 so\'m',
+      code: '*120#',
+    ),
+    PlansItemModel(
+      title: 'SOF 70',
+      type: 'SOF',
+      price: '70.000 so\'m',
+      limit: '30 kun',
+      min: 'VIP daqiqa',
+      internet: '22000 MB',
+      sms: '4000 sms',
+      text: '1 MB/daq/SMS = 25 so\'m',
+      code: '*120#',
+    ),
+    PlansItemModel(
+      title: 'SOF 100',
+      type: 'SOF',
+      price: '100.000 so\'m',
+      limit: '30 kun',
+      min: 'VIP daqiqa',
+      internet: '35000 MB',
+      sms: '5000 sms',
+      text: '1 MB/daq/SMS = 25 so\'m',
+      code: '*120#',
+    ),
+    PlansItemModel(
+      title: 'SOF 150',
+      type: 'SOF',
+      price: '150.000 so\'m',
+      limit: '30 kun',
+      min: 'VIP daqiqa',
+      internet: 'VIP MB',
+      sms: '5000 sms',
+      text: '1 SMS = 25 so\'m',
+      code: '*120#',
+    ),
+    // BOSHQA
+    PlansItemModel(
+      title: 'START 10',
+      type: 'BOSHQA',
+      price: '10.000 so\'m',
+      limit: '30 kun',
+      min: '30 daqiqa',
+      internet: '30 MB',
+      sms: '30 sms',
+      text: '1 MB/daq/SMS = 10 so\'m',
+      code: '*120#',
+    ),
+    PlansItemModel(
+      title: 'OVOZ 15',
+      type: 'BOSHQA',
+      price: '15.000 so\'m',
+      limit: '30 kun',
+      min: '1500 daqiqa',
+      internet: '500 MB',
+      sms: '1500 sms',
+      text: '1 MB/daq/SMS = 50 so\'m',
+      code: '*120#',
+    ),
+    PlansItemModel(
+      title: 'INTERNET 60',
+      type: 'BOSHQA',
+      price: '60.000 so\'m',
+      limit: '30 kun',
+      min: '0 daqiqa',
+      internet: '20000 MB',
+      sms: '0 sms',
+      text: null,
+      code: '*120#',
+    ),
+  ];
+}

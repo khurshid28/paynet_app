@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
+<desc>Created with Fabric.js 1.7.22</desc>
+<defs>
+</defs>
+<g transform="translate(128 128) scale(0.72 0.72)" style="">
+	<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(-175.05 -175.05000000000004) scale(3.89 3.89)" >
+	<path d="M 62.43 89.991 c -8.742 0 -17.485 -3.327 -24.142 -9.983 L 10 51.72 C 3.551 45.272 0 36.698 0 27.578 S 3.551 9.885 10 3.437 c 2.38 -2.379 5.671 -3.618 9.027 -3.404 c 3.357 0.216 6.461 1.867 8.517 4.531 l 7.737 10.029 c 3.088 4.002 2.721 9.717 -0.854 13.291 c -3.064 3.064 -3.064 8.05 0 11.115 L 51.01 55.58 c 1.484 1.484 3.458 2.302 5.558 2.302 c 2.099 0 4.073 -0.817 5.558 -2.302 c 3.573 -3.574 9.289 -3.942 13.29 -0.854 l 10.029 7.737 c 2.664 2.056 4.315 5.16 4.531 8.518 s -1.025 6.647 -3.404 9.026 C 79.916 86.664 71.173 89.991 62.43 89.991 z M 18.26 6.007 c -1.517 0 -2.932 0.586 -4.018 1.672 c -10.972 10.972 -10.972 28.826 0 39.798 L 42.53 75.766 c 10.973 10.971 28.826 10.97 39.799 0 c 1.176 -1.177 1.766 -2.739 1.659 -4.399 c -0.106 -1.661 -0.892 -3.136 -2.209 -4.152 l -10.028 -7.737 c -1.622 -1.248 -3.936 -1.103 -5.384 0.346 c -2.617 2.618 -6.099 4.06 -9.8 4.06 c -3.702 0 -7.183 -1.441 -9.8 -4.06 L 30.186 43.241 c -5.404 -5.404 -5.404 -14.197 0 -19.6 c 1.448 -1.448 1.596 -3.763 0.345 -5.384 L 22.794 8.228 c -1.017 -1.317 -2.491 -2.102 -4.151 -2.208 C 18.515 6.012 18.387 6.007 18.26 6.007 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+</g>
+</g>
+</svg>
